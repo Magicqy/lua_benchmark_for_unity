@@ -1,10 +1,12 @@
 # lua_benchmark_for_unity
 
-测试使用release版本
+测试环境：
+以github上的release版本为准：
 slua-1.7.0
 tolua-1.0.8.591
 
-其中slua使用原生lua5.1，tolua使用luajit-2.1
+其中slua使用的是原生lua5.1，tolua使用的是luajit-2.1
+unity编译设置为il2cpp，测试设备：华为荣耀9
 
 测试结果：
 case    tolua   slua
