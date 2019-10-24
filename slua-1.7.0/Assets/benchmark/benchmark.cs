@@ -82,20 +82,11 @@ public class benchmark : MonoBehaviour
             UnityEngine.Profiling.Profiler.EndSample();
         }
 
-        if (GUI.Button(new Rect(200, 100, 120, 50), "Test6 jit"))
+        if (GUI.Button(new Rect(200, 100, 120, 50), "Test6"))
         {
             logText = "";
             var func = LuaSvr.mainState.getFunction("test6");
             UnityEngine.Profiling.Profiler.BeginSample("test6");
-            func.call();
-            UnityEngine.Profiling.Profiler.EndSample();
-        }
-
-        if (GUI.Button(new Rect(200, 200, 120, 50), "Test6 non-jit"))
-        {
-            logText = "";
-            var func = LuaSvr.mainState.getFunction("test7");
-            UnityEngine.Profiling.Profiler.BeginSample("test7");
             func.call();
             UnityEngine.Profiling.Profiler.EndSample();
         }
